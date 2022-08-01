@@ -73,6 +73,7 @@ public class Util {
     public static boolean insertOneSheet(BinaryTree<String> tree, ArrayList<String> arrayAnswers, String animal){
         
         System.out.println(arrayAnswers);
+        while (!arrayAnswers.isEmpty()){
         if(arrayAnswers.get(0).equals("si")){
             if(tree.getLeft() == null){
                 BinaryTree<String> animalTree = new BinaryTree();
@@ -88,7 +89,7 @@ public class Util {
                 }
                 return false;
             }
-        }else{
+        }else if(arrayAnswers.get(0).equals("no")){
             if(tree.getRight() == null){
                 BinaryTree<String> animalTree = new BinaryTree();
                 animalTree.setRootContent(animal);
@@ -104,5 +105,8 @@ public class Util {
                 return false;
             }
         }
+        }
+        return true;
     }
+    
 }
