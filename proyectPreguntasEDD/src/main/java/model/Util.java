@@ -108,5 +108,9 @@ public class Util {
         }
         return true;
     }
-    
+    public static int numQuestions(Stack<BinaryTree<String>> Questions){
+        int cont;
+        cont = Questions.size();
+        return cont;
+    }
 }
